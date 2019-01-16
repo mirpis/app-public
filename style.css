@@ -1,3 +1,24 @@
+.container{
+  width:990px;
+  margin:auto;
+}
+form{
+  text-align: center;
+}
+/*
+label {
+  padding-right:  2px;
+}
+*/
+pre {
+  text-align: center;
+  font-size: 20px;
+}
 body {
   color: red;
+}
+input[type=text], input[type=password]{
+  border-radius: 3px;
+  padding: 3px;
+
 }

@@ -1,0 +1,10 @@
+{
+    "require": {
+        "kint-php/kint": "3.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "Klasy\\": "Klasy/"
+        }
+    }
+}

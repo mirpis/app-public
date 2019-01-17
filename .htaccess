@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^zaloguj-sie/$ index.php?klasa=Dostep&funkcja=logowanie [L]
+RewriteRule ^zaloguj$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]

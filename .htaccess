@@ -1,3 +1,6 @@
 RewriteEngine On
 RewriteRule ^zaloguj-sie/$ index.php?klasa=Dostep&funkcja=logowanie [L]
 RewriteRule ^zaloguj$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]
+# Napisz kolejne reguły do:
+# - Wyświetlenia strony po zalogowaniu (np. klasa=Start&funkcja=powitanie)
+# - Wyświetlenia formularza rejestracji (np. klasa=Dostep&funkcja=ekranRejestracji)

@@ -1,0 +1,2 @@
+# W tym pliku znajdą się katalogi w których git nie będzie odnotowywał zmian, a co za tym idzie, nie będzie ich w projekcie pobieranym świeżo z gitlaba.
+vendor/

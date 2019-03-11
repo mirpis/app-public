@@ -1,5 +1,5 @@
 <?php
-namespace Klasy
+namespace Klasy;
 /**
  * Ustawienia aplikacji
  */
@@ -11,6 +11,9 @@ class Ustawienia
     'appName' => "Korepetycje",
     'appDir' => '',
     'dbType' => 'mysql',
+    'dbName' => 'korepetycje2019',
+    'dsn' => 'mysql:dbname=korepetycje2019;hostname=localhost',
+    'appURL' => 'http://localhost/app/'
     // ..
   ];
   /**

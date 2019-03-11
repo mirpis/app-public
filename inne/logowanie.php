@@ -17,6 +17,7 @@ if(isset($_POST['log_in'])){ // JEŻELI ZOSTAŁO WYSŁANE ['log_in'] // TO:
   $query = "SELECT * FROM klienci WHERE login = '$login' AND haslo = '$haslo'";
   $stmt = ($dbc_h->query($query));
   d($query, $stmt->fetchAll(PDO::FETCH_ASSOC));
+  
   // mysqli_set_charset($dbc_h, "utf8");
   //
   // $wynik = mysqli_query($dbc_h, "SELECT * from klienci WHERE login = '$login' ") or die(mysqli_error($dbc_h));

@@ -1,11 +1,16 @@
-RewriteEngine On
+# PRZYJAZNE ADRESY
+
+RewriteEngine On  # [L] nie szuka dalej
+
 RewriteRule ^zaloguj-sie$ index.php?klasa=Dostep&funkcja=logowanie [L]
-# [L] nie szuka dalej
+
 RewriteRule ^zaloguj$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]
 # $_GET['klasa'] = "Dostep"
 
-# Napisz kolejne reguły do:
-RewriteRule ^/?$ index.php?klasa=Start&funkcja=powitanie [L]
-# - Wyświetlenia formularza rejestracji (np. klasa=Dostep&funkcja=ekranRejestracji)
-RewriteRule ^home$ index.php?klasa=Start&funkcja=powitanie
+RewriteRule ^/?$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]
+
+RewriteRule ^home$ index.php?klasa=KlientZalogowany&funkcja=powitanie
 # $_GET['klasa'] = "Start"
+
+# Napisz kolejne reguły do:
+# - Wyświetlenia formularza rejestracji (np. klasa=Dostep&funkcja=ekranRejestracji)

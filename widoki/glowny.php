@@ -5,4 +5,4 @@
     <title></title>
   </head>
   <body>
-    <h3>Witaj na stronie</h3>
+    <h1>Witaj w sklepie</h1>

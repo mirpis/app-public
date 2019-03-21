@@ -9,7 +9,8 @@ class Glowna
     function __construct()
     {
       Sesja::getInstance();
-      if (Sesja::get('id') === null && $_GET['klasa'] !== 'Dostep') {
+      if (Sesja::get('id') === null && $_GET['klasa'] !== 'Dostep')
+      {
         header('Location: ' . Ustawienia::get('appURL') . 'zaloguj');
       }
       $kontroler = "\\Klasy\\".$_GET['klasa'];

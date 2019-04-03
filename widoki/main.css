@@ -1,0 +1,41 @@
+body
+{
+  background-color: #2F3336;
+  color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+}
+h1
+{
+  font-size: 36px;
+  font-weight: 400;
+  color: #C0D06F;
+  margin: 20px;
+}
+
+.pizamy
+{
+ text-align: center;
+/*display: inline-block; kafelki układają się obok siebie*/
+/*display: block;*/
+/* width: 32%; w jednym rzędzie mieszczą się max. 3 kafelki*/
+}
+.pizamy img
+{
+  width: 100%; /* zdjęcie ma zajmować 100% dostępnej szerokości dla zdjęcia w np: col-sm-6
+                   bo inaczej przeglądarka użyła by rozmiaru orginalnej grafiki*/
+  height: auto;
+}
+.pizamy p
+{
+  margin-bottom: 30px;
+}
+.pizamy figcaption
+{
+  margin-top: 8px;
+}
+.pizamy figure
+{
+  margin-top: 10px; /* marginesy do okoła obrazów są domyślnie dużo większe*/
+
+}

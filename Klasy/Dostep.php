@@ -38,13 +38,10 @@ class Dostep
 
         public function wylogowanie()
         {
-          if (isset($_GET['akcja']) && $_GET['akcja'] == "wyloguj")
-          {
               $_SESSION['zalogowany'] = 0;
               session_destroy();
-              header('Location: ' . Ustawienia::get('appURL') . 'zaloguj');
+              header('Location: ' . Ustawienia::get('appURL'));
               echo "Zostałeś pomyślnie wylogowany<br />";
-          }
 
           /*
             Sesja::getInstance();

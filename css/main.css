@@ -13,6 +13,12 @@ h1
   margin: 20px;
 }
 
+.nav-left
+{
+  width: 20%;
+  float: left;
+  margin-left: 30px;
+}
 .pizamy
 {
  text-align: center;
@@ -44,3 +50,10 @@ h1
   min-height: 90vh;
   background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url('../img/jumbotron.jpg') no-repeat center center fixed;
 }
+/*
+SPRAWIA ŻE: SUBMENU Kolekcje na wszystkie pory roku ROZWIJE SIĘ PO WYŁĄCZNIE NAJECHANIU MYSZKĄ BEZ KLIKNIĘCIA
+.navbar-nav li:hover>.dropdown-menu
+{
+  display: block;
+}
+*/

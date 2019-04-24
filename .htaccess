@@ -6,8 +6,9 @@ RewriteRule ^zaloguj-sie$ index.php?klasa=Dostep&funkcja=logowanie [L]
 
 RewriteRule ^zaloguj$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]
 # $_GET['klasa'] = "Dostep"
+RewriteRule ^wyloguj$ index.php?klasa=Dostep&funkcja=wylogowanie [L]
 
-RewriteRule ^/?$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]
+RewriteRule ^/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie [L]
 
 RewriteRule ^home$ index.php?klasa=KlientZalogowany&funkcja=powitanie
 # $_GET['klasa'] = "Start"

@@ -3,7 +3,7 @@
  {
    class Customer
    {
-     public $nazwa = "ktos";
+     public $nazwa = "ktosicki";
    }
  }
  namespace nazwaPrzestrzeni2

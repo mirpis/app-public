@@ -24,6 +24,15 @@
     <a class="btn btn-outline-warning w-100 mt-3" href="http://localhost/app/">Powrót do strony głównej</a>
   </form>
 </div>
+<!-- DODATKOWE ATRYBUTY  integrity ORAZ crossorigin - NOWY POMYSŁ NA ŁADOWANIE POTRZEBNYCH ŻRÓDEŁ
+WRAZ ZE SPRAWDZENIEM INTEGRALNOŚCI ICH POCHODZENIA -
+..MOGĄ BYĆ WPISANE ALE NIE MUSZĄ..-->
+
+<!--  integrity - POZWOLI NIE ŁADOWAĆ DO PRZEGLĄDARKI KODU KTÓRY ZOSTAŁ W JAKIŚ SPOSÓB ZMANIPULOANY WZGLĘDEM OFICJALNEGO "RYLISU" -->
+
+<!--  crossorigin - ATRYBUT crossorigin JEST OBECNY KIEDY KORZYSTAMY Z TZW. MECHANIZMU "CORS"(CROSS-ORIGIN-RESOURCE SHARING)
+POZWALA UŻYWAĆ DODATKOWYCH NAGŁÓWKÓW "HTTP" NA STRONACH  KRÓRE TEORETYCZNIE PRZESTRZEGAJĄ
+ZASADY " SEIM ORIGIN" CZYLI ŁADUJĄ SWOJE ZASOBY Z JEDNEJ DOMENY-->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

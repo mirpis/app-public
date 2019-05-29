@@ -6,8 +6,7 @@ namespace Klasy;
 class Ustawienia
 {
   private static $ustawienia = [
-    // Tu ma się znaleź lista ustawień które aplikacja wykorzysta
-    // Np. Ścieżka do aplikacji, dane dostępowe do bazy danych, itd.
+  
     'appName' => "Korepetycje",
     'appDir' => '',
     'dbType' => 'mysql',

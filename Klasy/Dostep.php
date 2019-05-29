@@ -43,14 +43,7 @@ class Dostep
               header('Location: ' . Ustawienia::get('appURL'));
               echo "Zostałeś pomyślnie wylogowany<br />";
 
-          /*
-            Sesja::getInstance();
-            if (Sesja::get('id') === null && $_GET['klasa'] !== 'Dostep')
-            {
-              header('Location: ' . Ustawienia::get('appURL') . 'zaloguj');
-            }
-            */
-            //  echo "Zostałeś pomyślnie wylogowany<br />"
+        
          }
 
 }

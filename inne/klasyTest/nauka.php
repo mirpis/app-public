@@ -3,10 +3,12 @@
 class Imie{
   public $imie;
 
-  function __construct($jakie){
+  function __construct($jakie)
+  {
     $this->imie = $jakie;
   }
-  function wypisz(){
+  function wypisz()
+  {
     echo $this->imie.' <br />';
   }
 }
@@ -18,4 +20,5 @@ $c = new Imie("Romam");
 $a->wypisz();
 $b->wypisz();
 $c->wypisz();
+echo var_dump($a);
 ?>

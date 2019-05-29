@@ -13,7 +13,7 @@
   {
     public $id = 50;
   }
-   $c = new \nazwaPrzestrzeni2\Customer();
+   $c = new \nazwaPrzestrzeni\Customer();
 
    echo $c->nazwa;
 

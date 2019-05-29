@@ -2,16 +2,20 @@
 
 RewriteEngine On  # [L] nie szuka dalej
 
-RewriteRule ^zaloguj-sie$ index.php?klasa=Dostep&funkcja=logowanie [L]
+# $_GET['klasa'] = "Rejestracja"
+RewriteRule ^zarejestruj-sie$ index.php?klasa=RejestracjaKlienta&funkcja=Rejestracja [L]
+RewriteRule ^zarejestruj$ index.php?klasa=RejestracjaKlienta&funkcja=ekranRejestracji [L]
+#RewriteRule ^zarejestrowany$ index.php?klasa=PowitanieRejestracja&funkcja=powitanie
 
-RewriteRule ^zaloguj$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]
 # $_GET['klasa'] = "Dostep"
-RewriteRule ^wyloguj$ index.php?klasa=Dostep&funkcja=wylogowanie [L]
+RewriteRule ^zaloguj-sie$ index.php?klasa=Dostep&funkcja=logowanie [L]
+RewriteRule ^zaloguj$ index.php?klasa=Dostep&funkcja=ekranLogowania [L]
 
+# $_GET['klasa'] = "KlientZalogowany"
 RewriteRule ^/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie [L]
+RewriteRule ^home$ index.php?klasa=KlientZalogowany&funkcja=powitanie [L]
 
-RewriteRule ^home$ index.php?klasa=KlientZalogowany&funkcja=powitanie
-# $_GET['klasa'] = "Start"
-
-# Napisz kolejne reguły do:
-# - Wyświetlenia formularza rejestracji (np. klasa=Dostep&funkcja=ekranRejestracji)
+RewriteRule ^pizamy/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie&kategoria=pizama [L]
+RewriteRule ^koszule-nocne/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie&kategoria=koszula-nocna [L]
+RewriteRule ^koszule-ciazowe/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie&kategoria=koszula-ciazowa [L]
+RewriteRule ^szlafroki/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie&kategoria=szlafroki [L]

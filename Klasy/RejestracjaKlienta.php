@@ -5,40 +5,56 @@ namespace Klasy;
 use PDO;
 use Klasy\Ustawienia;
 
-class RejestracjaKlienta
+class Rejestracja
 {
-     public function ekranRejestracji()
+   public function ekranRejestracji()
+   {
+     require './widoki/rejestracja.php';
+   }
+
+   public function Rejesrtacja()
+   {
+     try{
+       $dbc_h = new PDO(Ustawienia::get('dsn'), 'root', '') or die ("Nie udało sie połączyć z bazą");
+       // $db = new PDO('mysql:host=localhost;dbname=nazwa_bazy', 'nazwa_uzytkownika', 'haslo_do_bazy');
+        }
+          catch (PDOException $e)
+        {
+          die ("Error connecting to database!");
+        }
+
+     function filtruj($zmienna)
      {
-       require './widoki/rejestracja.php';
+         if(get_magic_quotes_gpc())
+             $zmienna = stripslashes($zmienna); // usuwamy slashe
+
+        // usuwamy spacje, tagi html oraz niebezpieczne znaki
+         return mysql_real_escape_string(htmlspecialchars(trim($zmienna)));
      }
 
-     public function rejestracja()
+     if (isset($_POST['rejestruj']))
      {
-       try{
-         $dbc_h = new PDO(Ustawienia::get('dsn'), 'root', '') or die ("Nie udało sie połączyć z bazą");
-      // $db = new PDO('mysql:host=localhost;dbname=nazwa_bazy', 'nazwa_uzytkownika', 'haslo_do_bazy');
-          }
-            catch (PDOException $e)
-          {
-            die ("Error connecting to database!");
-          }
+        $login = filtruj($_POST['login']);
+        $haslo1 = filtruj($_POST['haslo1']);
+        $haslo2 = filtruj($_POST['haslo2']);
+        $email = filtruj($_POST['email']);
+        $ip = filtruj($_SERVER['REMOTE_ADDR']);
 
-          if(isset($_POST['register']))
-          {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $hashPassword = password_hash($password,PASSWORD_BCRYPT);
+        // sprawdzamy czy login nie jest już w bazie
+        if (mysql_num_rows(mysql_query("SELECT login FROM uzytkownicy WHERE login = '".$login."';")) == 0)
+        {
+           if ($haslo1 == $haslo2) // sprawdzamy czy hasła takie same
+           {
+              mysql_query("INSERT INTO `uzytkownicy` (`login`, `haslo`, `email`, `rejestracja`, `logowanie`, `ip`)
+                 VALUES ('".$login."', '".md5($haslo1)."', '".$email."', '".time()."', '".time()."', '".$ip."');");
 
-            $sth = $dbc_h->prepare('INSERT INTO user (email,password) VALUE (:email,:password)');
-            $sth->bindValue(':email', $email, PDO::PARAM_STR);
-            $sth->bindValue(':password', $hashPassword, PDO::PARAM_STR);
-            $sth->execute();
-
-            die('Rejestracja pomyslna!');
-          }
+              echo "Konto zostało utworzone!";
+           }
+           else echo "Hasła nie są takie same";
+        }
+        else echo "Podany login jest już zajęty.";
      }
 
-
-
+   }
 }
 ?>

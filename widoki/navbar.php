@@ -1,9 +1,15 @@
-<div class="col-md-12">
-  <div class="d-flex justify-content-center flex-column">
-    <h1>SABA</h1>
-    <h5>Sklep z piżamami</h5>
+
+
+  <div class="col-md-12 row justify-content-md-center">
+    <div class="col-md-auto">
+      <h1 class="display-2">SABA</h1>
+    </div>
   </div>
-</div>
+  <div class="col-md-12 row justify-content-md-center">
+    <div class="col-md-auto">
+      <h5>SKLEP Z PIŻAMAMI</h5>
+    </div>
+  </div>
 
  <nav class="navbar navbar-expand-lg navbar-dark bg-danger py-3 sticky-top">
   <a class="navbar-brand" href="#offer">

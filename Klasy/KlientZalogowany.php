@@ -9,7 +9,7 @@ class KlientZalogowany
   public function powitanie()
   {
     $produkty = [
-      ['link' => 'koszula-ciążowa-do-karmienia', 'tytul' => 'koszula-ciążowa-do-karmienia', 'cena' => '67', 'typ' => 'koszula-ciążowa'],
+      ['link' => 'koszula-ciążowa-do-karmienia', 'tytul' => 'koszula-ciążowa-do-karmienia', 'cena' => '67', 'typ' => 'koszula-ciazowa'],
 
       ['link' => 'koszula-nocna', 'tytul' => 'koszula-nocna', 'cena' => '57', 'typ' => 'koszula-nocna'],
       ['link' => 'koszula-nocna-długa', 'tytul' => 'koszula-nocna-długa', 'cena' => '57', 'typ' => 'koszula-nocna'],
@@ -19,10 +19,10 @@ class KlientZalogowany
       ['link' => 'koszula-nocna-siatka', 'tytul' => 'koszula-nocna-siatka', 'cena' => '57', 'typ' => 'koszula-nocna'],
 
       ['link' => 'piżama', 'tytul' => 'piżama', 'cena' => '65', 'typ' => 'piżama'],
-      ['link' => 'piżama-ze-spodniami-3-4', 'tytul' => 'piżama-ze-spodniami-3-4', 'cena' => '65', 'typ' => 'piżama'],
-      ['link' => 'piżama-z-krótkimi-spodenkami', 'tytul' => 'piżama-z-krótkimi-spodenkami', 'cena' => '65', 'typ' => 'piżama'],
-      ['link' => 'piżama-z-krótkimi-spodenkami-grochy', 'tytul' => 'piżama-z-krótkimi-spodenkami-grochy', 'cena' => '65', 'typ' => 'piżama'],
-      ['link' => 'piżama-z-legginsami-3-4', 'tytul' => 'piżama-z-legginsami-3-4', 'cena' => '65', 'typ' => 'piżama'],
+      ['link' => 'piżama-ze-spodniami-3-4', 'tytul' => 'piżama-ze-spodniami-3-4', 'cena' => '65', 'typ' => 'pizama'],
+      ['link' => 'piżama-z-krótkimi-spodenkami', 'tytul' => 'piżama-z-krótkimi-spodenkami', 'cena' => '65', 'typ' => 'pizama'],
+      ['link' => 'piżama-z-krótkimi-spodenkami-grochy', 'tytul' => 'piżama-z-krótkimi-spodenkami-grochy', 'cena' => '65', 'typ' => 'pizama'],
+      ['link' => 'piżama-z-legginsami-3-4', 'tytul' => 'piżama-z-legginsami-3-4', 'cena' => '65', 'typ' => 'pizama'],
 
       ['link' => 'szlafrok-z-dzianiny-shirtowej', 'tytul' => 'szlafrok-z-dzianiny-shirtowej', 'cena' => '65', 'typ' => 'szlafrok'],
     ];

@@ -6,7 +6,7 @@ namespace Klasy;
 class Ustawienia
 {
   private static $ustawienia = [
-  
+
     'appName' => "Korepetycje",
     'appDir' => '',
     'dbType' => 'mysql',

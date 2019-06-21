@@ -1,6 +1,10 @@
 <?php
   namespace Klasy;
   //session_start();
+  /**
+   *
+   *
+   */
 
   use PDO;
   use Klasy\Ustawienia;

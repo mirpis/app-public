@@ -1,5 +1,6 @@
 <?php include './widoki/glowny.php';?>
 
+<!-- -->
 <div class="container d-flex justify-content-center flex-column mt-5 p-5 col-md-4 border rouned">
 
   <h3>Zarejestruj się</h3>

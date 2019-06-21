@@ -43,7 +43,7 @@ class Dostep
               header('Location: ' . Ustawienia::get('appURL'));
               echo "Zostałeś pomyślnie wylogowany<br />";
 
-        
+
          }
 
 }

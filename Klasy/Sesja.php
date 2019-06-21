@@ -18,6 +18,9 @@ class Sesja
   }
 
   public static function getInstance()
+  // Metoda ta sprawdza, czy istnieje już instancja tej klasy,
+  // jeżeli nie – tworzy ją i przechowuje jej referencję w prywatnym polu.
+  // Aby uniemożliwić tworzenie dodatkowych instancji, konstruktor klasy deklaruje się jako prywatny lub chroniony.
   {
    if (!isset(self::$instance))
    {
@@ -38,14 +41,16 @@ class Sesja
    return $this->sessionState;
   }
 
-  // set - metoda ma dostac dwa parametry: $indeks, $wartosc; ma ona ustawic w tablicy $_SESSION pod danym indeksem podaną wartośc
+  // set - metoda ma dostac dwa parametry: $indeks, $wartosc;
+  // ma ona ustawic w tablicy $_SESSION pod danym indeksem podaną wartośc
 
   public static function set( $name , $value )
   {
     $_SESSION[$name] = $value;
   }
 
-  // get - metoda ma jeden parametr: $indeks; ma zwrócic z tablicy $_SESSION wartosc spod tego indeksu
+  // get - metoda ma jeden parametr: $indeks;
+  // ma zwrócic z tablicy $_SESSION wartosc spod tego indeksu
 
   public static function get( $name )
   {
@@ -55,7 +60,8 @@ class Sesja
     }
   }
 
-  // unset - metoda ma jeden parametr ($indeks) i wykorzystac wbudowaną metodę unset() do wyczyszczenia danych w tablicy $_SESSION spod tego indeksu
+  // unset - metoda ma jeden parametr ($indeks) i wykorzystac wbudowaną metodę unset()
+  // do wyczyszczenia danych w tablicy $_SESSION spod tego indeksu
 
   public function __isset( $name )
   {

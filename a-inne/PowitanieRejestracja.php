@@ -3,6 +3,7 @@ namespace Klasy;
 
 /**
  *
+ *
  */
 class PowitanieRejestracja
 {

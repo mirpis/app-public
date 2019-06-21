@@ -1,13 +1,9 @@
 
 
   <div class="col-md-12 row justify-content-md-center">
-    <div class="col-md-auto">
-      <h1 class="display-2">SABA</h1>
-    </div>
-  </div>
-  <div class="col-md-12 row justify-content-md-center">
-    <div class="col-md-auto">
-      <h5>SKLEP Z PIŻAMAMI</h5>
+    <div class="d-flex flex-column justify-content-center">
+      <h1 class="app-title">SABA</h1>
+        <h5 class="d-flex justify-content-center">SKLEP Z PIŻAMAMI</h5>
     </div>
   </div>
 
@@ -68,6 +64,9 @@
           ?>
            <a class="nav-item nav-link">Witaj <?php echo $_SESSION['id']; ?></a>
            <a class="nav-item nav-link" href="http://localhost/app/wyloguj">Wyloguj</a>
+           <a class="navbar-brand" href="http://localhost/app/koszyk">
+           <i class="fas fa-shopping-cart"></i>
+           </a>
           <?php
           } else {
           ?>

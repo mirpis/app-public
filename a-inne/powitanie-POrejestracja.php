@@ -1,5 +1,8 @@
 <?php
-
+/**
+ *
+ *
+ */
 ?>
 <h3>Dziękujemy za rejestrację w serwisie! Możesz już zalogować się na swoje konto!</h3><br /><br />
 

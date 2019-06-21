@@ -1,5 +1,9 @@
 <?php
 header('Location: zaloguj');
+/**
+ *
+ *
+ */
  ?>
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">

@@ -27,3 +27,44 @@
   <body>
   <!-- 100vh - PROCENTOWA WYSOKOŚC STRONY / CAŁA WYSOKOŚĆ
        100vw - PROCENTOWA SZEROKOŚĆ STRONY / CAŁA SZEROKOŚĆ -->
+       <?php
+       if (isset($_SESSION['sukces'])) {
+         foreach ($_SESSION['sukces'] as $wiadomosc) {
+           ?>
+           <div class="alert alert-success alert-dismissible fade show" role="alert">
+             <?php echo $wiadomosc ?>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <?php
+         }
+       }
+       if (isset($_SESSION['blad'])) {
+         foreach ($_SESSION['blad'] as $wiadomosc) {
+           ?>
+           <div class="alert alert-danger alert-dismissible fade show" role="alert">
+             <?php echo $wiadomosc ?>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <?php
+         }
+       }
+       if (isset($_SESSION['uwaga'])) {
+         foreach ($_SESSION['uwaga'] as $wiadomosc) {
+           ?>
+           <div class="alert alert-warning alert-dismissible fade show" role="alert">
+             <?php echo $wiadomosc ?>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <?php
+         }
+       }
+       unset($_SESSION['sukces']);
+       unset($_SESSION['blad']);
+       unset($_SESSION['uwaga']);
+        ?>

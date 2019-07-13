@@ -10,7 +10,7 @@ class KlientZalogowany
   {
     $baza = new Database();
     $baza->connect();
-    $zapytanie = 'SELECT p.*, t.nazwa FROM `produkty` p JOIN typ_produktu t ON t.id = p.typ';
+    $zapytanie = 'SELECT p.*, t.nazwa FROM `produkty` p JOIN typ_produktu t ON t.id = p.typ_id';
 
     if (isset($_GET['kategoria']))
     {

@@ -26,12 +26,12 @@ include './widoki/glowny.php';
     {?>
       <div class="col-md-3 p-1 mt-3 text-dark">
         <div class="card h-100">
-          <img class="card-img-top" src="http://localhost/app/img/<?php echo $produkt['link'] ?>.jpg" alt="Card image">
+          <img class="card-img-top" src="<?php echo APP_URL . 'img/' . $produkt['link'] ?>" alt="Card image">
           <div class="card-body">
             <h4 class="card-title"><?php echo $produkt['tytul'] ?></h4>
             <?php if (isset($_SESSION['id'])) {
               ?><h4><?php echo $produkt['cena'] ?> zł</h4>
-            <a href="#" class="btn btn-outline-primary">
+            <a href="<?php echo APP_URL ?>dodaj-do-koszyka/<?php echo $produkt['id'] ?>" class="btn btn-outline-primary">
               <i class="fas fa-shopping-basket"></i>
               Dodaj do koszyka
             </a><?php

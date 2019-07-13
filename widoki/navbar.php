@@ -63,15 +63,15 @@
           if (isset($_SESSION['id'])) {
           ?>
            <a class="nav-item nav-link">Witaj <?php echo $_SESSION['id']; ?></a>
-           <a class="nav-item nav-link" href="http://localhost/app/wyloguj">Wyloguj</a>
-           <a class="navbar-brand" href="http://localhost/app/koszyk">
+           <a class="nav-item nav-link" href="<?php echo APP_URL ?>wyloguj">Wyloguj</a>
+           <a class="navbar-brand" href="<?php echo APP_URL ?>koszyk">
            <i class="fas fa-shopping-cart"></i>
            </a>
           <?php
           } else {
           ?>
-            <a class="nav-item nav-link" href="http://localhost/app/zaloguj">Zaloguj</a>
-            <a class="nav-item nav-link" href="http://localhost/app/zarejestruj">Rejestracja</a>
+            <a class="nav-item nav-link" href="<?php echo APP_URL ?>zaloguj">Zaloguj</a>
+            <a class="nav-item nav-link" href="<?php echo APP_URL ?>zarejestruj">Rejestracja</a>
           <?php
           }
         ?>

@@ -4,10 +4,28 @@
 <div class="container d-flex justify-content-center flex-column mt-5  p-5 col-md-4 border rounded">
 
     <h1>Zakupy on-line</h1>
-    <p><a href="http://localhost/app/pizamy/">Piżamy</a></p>
-    <p><a href="http://localhost/app/koszule-nocne/">Koszule nocne</a></p>
-    <p><a href="http://localhost/app/koszule-ciazowe/">Koszule ciążowe</a></p>
-    <p><a href="http://localhost/app/szlafroki/">Szlafroki</a></p>
+    <div class="d-flex flex-column">
+        <div class="naglowki d-flex flex-row">
+          <p class="col-md-3">Typ</p>
+          <p class="col-md-3">Produkt</p>
+          <p class="col-md-2">Cena</p>
+          <p class="col-md-2"></p>
+          <p class="col-md-2"></p>
+        </div>
+      <?php foreach ($koszyk as $k) {// $k - id produktu z koszyka ?>
+        <div class="produkt d-flex flex-row">
+          <p class="col-md-3"><?php echo $produkty[$k]['typ'] ?></p>
+          <p class="col-md-3"><?php echo $produkty[$k]['tytul'] ?></p>
+          <p class="col-md-2"><?php echo $produkty[$k]['cena'] ?>zł</p>
+          <p class="col-md-2"><img src="<?php echo APP_URL . 'img/' . $produkty[$k]['link'] ?>" width="50px"></p>
+          <a class="col-md-2 btn btn-outline-warning" href="<?php echo APP_URL . 'usun-z-koszyka/' . $k ?>">Usuń</a>
+        </div>
+      <?php } ?>
+    </div>
+    <!-- <p><a href="<?php echo APP_URL ?>pizamy/">Piżamy</a></p>
+    <p><a href="<?php echo APP_URL ?>koszule-nocne/">Koszule nocne</a></p>
+    <p><a href="<?php echo APP_URL ?>koszule-ciazowe/">Koszule ciążowe</a></p>
+    <p><a href="<?php echo APP_URL ?>szlafroki/">Szlafroki</a></p>
     <br />
     <form action="sklep.php" method="post">
       <input type="submit" name="pusty_koszyk"  value="Pusty koszyk" />
@@ -16,5 +34,5 @@
     <?php
       pusty_koszyk();
       pokaz_koszyk();
-    ?>
+    ?> -->
 </div>

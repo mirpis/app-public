@@ -24,5 +24,6 @@ RewriteRule ^koszule-ciazowe/?$ index.php?klasa=KlientZalogowany&funkcja=powitan
 RewriteRule ^szlafroki/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie&kategoria=4 [L]
 
 # $_GET['klasa'] = "Koszyk"
- #RewriteRule ^dodaj-do-koszyka$ index.php?klasa=Koszyk=zakupy [L]
- #RewriteRule ^koszyk$ index.php?klasa=Koszyk=ekranZakupow [L]
+# (\d+) oznacza cyfrę "\d" a plus oznacza jeden lub więcej takich znaków, np. 3 lub 123
+RewriteRule ^dodaj-do-koszyka/(\d+)$ index.php?klasa=Koszyk&funkcja=dodaj&id=$1 [L]
+RewriteRule ^koszyk$ index.php?klasa=Koszyk&funkcja=koszyk [L]

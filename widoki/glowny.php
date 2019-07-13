@@ -17,8 +17,8 @@
     <meta name="author" content="Mirosław Pisula">
     <meta http-equiv="X-Ua-Compatible" content="IE-edge">
 
-    <link rel="stylesheet" href="http://localhost/app/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/app/css/main.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 
 

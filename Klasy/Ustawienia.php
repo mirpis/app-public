@@ -11,7 +11,7 @@ class Ustawienia
     'appDir' => '',
     'dbType' => 'mysql',
     'dbName' => 'korepetycje2019',
-    'dsn' => 'mysql:dbname=korepetycje2019;hostname=localhost',
+    'dsn' => 'mysql:dbname=korepetycje2019;hostname=localhost;charset=utf8',
     'appURL' => 'http://localhost/app/'
     // ..
   ];

@@ -13,7 +13,7 @@ class Database
    * Tworzy połączenie z bazą danych
    * @return self Zwraca cały obiekt do wykonywania dalszych funkcji
    */
-  public function connect() : self
+  public function connect() : self // self -zwraca klasę albo obiekt tej klasy
   {
     if (! $this->isConnected()) {
       $this->pdo = new PDO(
@@ -34,10 +34,11 @@ class Database
     return (bool) $this->pdo;
   }
   /**
-   * Wykonuje zapytanie i zwraca rezultat
+   * Wykonuje zapytanie i zwraca rezultat.
+   * 
    * @param  string $sql    Kod SQL do wykonania
    * @param  array  $params Parametry zapytania
-   * @return
+   * @return mixed
    */
   public function query(string $sql, array $params = [])
   // array $params = [] TO: VALUES (?, ?, ?) CZYLI NP: $p['email'], $p['login'], $p['haslo1']
@@ -50,6 +51,8 @@ class Database
     }
 
     if (\strpos(\strtoupper($sql), 'SELECT') >= 0) {
+      // strtoupper - zamienia wszystkie znaki na duże litery np; select na SELECT
+      //ale oprócz polskich znaków
     // strpos- szuka kawałka tekstu w większym tekscie , jeżeli nie znajdzie
   //   to zwraca -1
   //  >=0 - pozycja zero - na początku: SELECT `klienci`

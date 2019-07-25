@@ -20,7 +20,8 @@ class Sesja
   public static function getInstance()
   // Metoda ta sprawdza, czy istnieje już instancja tej klasy,
   // jeżeli nie – tworzy ją i przechowuje jej referencję w prywatnym polu.
-  // Aby uniemożliwić tworzenie dodatkowych instancji, konstruktor klasy deklaruje się jako prywatny lub chroniony.
+  // Aby uniemożliwić tworzenie dodatkowych instancji,
+  //    konstruktor klasy deklaruje się jako prywatny lub chroniony.
   {
    if (!isset(self::$instance))
    {

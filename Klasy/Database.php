@@ -35,7 +35,7 @@ class Database
   }
   /**
    * Wykonuje zapytanie i zwraca rezultat.
-   * 
+   *
    * @param  string $sql    Kod SQL do wykonania
    * @param  array  $params Parametry zapytania
    * @return mixed
@@ -51,8 +51,8 @@ class Database
     }
 
     if (\strpos(\strtoupper($sql), 'SELECT') >= 0) {
-      // strtoupper - zamienia wszystkie znaki na duże litery np; select na SELECT
-      //ale oprócz polskich znaków
+      // strtoupper - zamienia wszystkie znaki na duże litery
+      // np; select na SELECT  ale oprócz polskich znaków
     // strpos- szuka kawałka tekstu w większym tekscie , jeżeli nie znajdzie
   //   to zwraca -1
   //  >=0 - pozycja zero - na początku: SELECT `klienci`
@@ -61,7 +61,8 @@ class Database
       return $this->pdo->lastInsertId();
       // lastInsertId - POKAZUJE id OSTATNIEGO WSTAWIONEGO WIERSZA
     } else {
-      return $result; // JEŻELI INNA KOMENDA TO INFORMACJA CZY POSZŁO CZY NIE POSZŁO.
+      return $result; // JEŻELI INNA KOMENDA TO INFORMACJA
+                     // CZY POSZŁO CZY NIE POSZŁO.
     }
   }
 }

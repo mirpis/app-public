@@ -7,8 +7,7 @@ define('APP_URL', Ustawienia::get('appURL'));
  */
 class Glowna
 {
-     $k = new Koszyk();
-     $k->
+
     function __construct()
     {
       Sesja::getInstance();
@@ -21,4 +20,3 @@ class Glowna
       $obiekt->$akcja();
      }
 }
-?>

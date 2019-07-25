@@ -1,7 +1,8 @@
 <?php include './widoki/glowny.php';
 //poczatek_sesji();
 ?>
-<div class="container d-flex justify-content-center flex-column mt-5  p-5 col-md-4 border rounded">
+<div class="container d-flex justify-content-center flex-column mt-5
+             p-5 col-md-8 border rounded">
 
     <h1>Zakupy on-line</h1>
     <div class="d-flex flex-column">
@@ -17,8 +18,10 @@
           <p class="col-md-3"><?php echo $produkty[$k]['typ'] ?></p>
           <p class="col-md-3"><?php echo $produkty[$k]['tytul'] ?></p>
           <p class="col-md-2"><?php echo $produkty[$k]['cena'] ?>zł</p>
-          <p class="col-md-2"><img src="<?php echo APP_URL . 'img/' . $produkty[$k]['link'] ?>" width="50px"></p>
-          <a class="col-md-2 btn btn-outline-warning" href="<?php echo APP_URL . 'usun-z-koszyka/' . $k ?>">Usuń</a>
+          <p class="col-md-3"><img src="<?php echo APP_URL . 'img/' .
+                                    $produkty[$k]['link'] ?>" width="90px"></p>
+          <a class="col-md-1 btn btn-warning btn h-25 d-inline-block" style="width: 120px;" href="<?php
+                              echo APP_URL . 'usun-z-koszyka/' . $k ?>">Usuń</a>
         </div>
       <?php } ?>
     </div>

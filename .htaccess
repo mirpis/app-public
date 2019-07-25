@@ -24,6 +24,8 @@ RewriteRule ^koszule-ciazowe/?$ index.php?klasa=KlientZalogowany&funkcja=powitan
 RewriteRule ^szlafroki/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie&kategoria=4 [L]
 
 # $_GET['klasa'] = "Koszyk"
-# (\d+) oznacza cyfrę "\d" a plus oznacza jeden lub więcej takich znaków, np. 3 lub 123
+# (\d+) "\d"oznacza cyfrę a plus oznacza jeden lub więcej takich znaków, np. 3 lub 123
+#          w tym wypadku to cyfry/liczby na końcu linku do zdjęcia: $1=/1,lub,/3 lub /123
+#           które jest dodawane do koszyka, i oznaczające jego:'id'
 RewriteRule ^dodaj-do-koszyka/(\d+)$ index.php?klasa=Koszyk&funkcja=dodaj&id=$1 [L]
 RewriteRule ^koszyk$ index.php?klasa=Koszyk&funkcja=koszyk [L]

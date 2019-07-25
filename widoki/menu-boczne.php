@@ -10,7 +10,7 @@ display: inline, inline-block, inline-table lub komórek tabeli -->
      TWÓJ WYBÓR
  </a>
 
- <a href="<?php echo APP_URL ?>izamy/" class="nav-link active">
+ <a href="<?php echo APP_URL ?>pizamy/" class="nav-link active">
      piżamy
  </a>
 

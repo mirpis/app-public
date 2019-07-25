@@ -17,12 +17,19 @@ class Koszyk
   {
       $id = $_GET['id'];
 
-      $koszyk = Sesja::get('koszyk');
+    //unset($_SESSION['koszyk']); -  czyści koszy
+
+      $koszyk = Sesja::get('koszyk');// d($koszyk);exit();
+      //włóż do zmiennej $koszyk to co do tej pory było już w koszyku
+
       if (isset($koszyk) && in_array($id, $koszyk)) {
-        // Produkt już jest w koszyku więc go nie dodajemy znowu
+     // Jeżeli następny Produkt który chcemy doda do koszyka
+    // jest już w koszyku to go nie dodajemy znowu/nic nie robimy
       } else {
-        $koszyk[] = $id;
+        $koszyk[] = $id; // Jeżeli nie jest w koszyku to go dodajemy
+
         Sesja::set('koszyk', $koszyk); // $_SESSION['koszyk'] = $koszyk;
+    // Ponownie ustawiamy w $_SESSION koszyk z dodanym jednym produktem
       }
 
       header('Location: ' . Ustawienia::get('appURL') . 'home');
@@ -35,15 +42,20 @@ class Koszyk
   {
       $koszyk = Sesja::get('koszyk');
 
-      $query = "SELECT p.*, t.nazwa AS 'typ' FROM produkty p JOIN typ_produktu t ON p.typ_id = t.id";
+      $query = "SELECT p.*, t.nazwa AS 'typ' FROM produkty p JOIN typ_produktu t ON p.typ = t.id";
 
       $db = (new Database())->connect()->query($query);
-
+      //d($db);
       $produkty = [];
 
+    // ponieważ tablica $db jest numerowana od 0,1,2..robimy PRZEINDEKSOWANIE
+    // tym FOREACH tworzym dodatkową TABLICĘ $produkty numerowaną od 1,2,3..
+    // żeby się numeracja 'id' produktów zgadzała z bazą danych
       foreach ($db as $value) {
           $produkty[$value['id']] = $value;
       }
+
+      d($produkty, $db);
 
       require './widoki/koszyk.php';
   }

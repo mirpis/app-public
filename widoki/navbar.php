@@ -59,14 +59,34 @@
       </form>
 
       <ul class="navbar-nav mr-auto">
+
+
+
+
+
         <?php
           if (isset($_SESSION['id'])) {
           ?>
            <a class="nav-item nav-link">Witaj <?php echo $_SESSION['id']; ?></a>
            <a class="nav-item nav-link" href="<?php echo APP_URL ?>wyloguj">Wyloguj</a>
+
            <a class="navbar-brand" href="<?php echo APP_URL ?>koszyk">
            <i class="fas fa-shopping-cart"></i>
-           </a>
+
+
+
+           <?php if(!isset($_SESSION['koszyk'])) { ?>
+           <p>Twój koszyk jest pusty.</p>
+          <?php }?>
+
+           <?php if(isset($_SESSION['koszyk'])) { ?>
+             <p> : <?php echo count($_SESSION['koszyk']);?> produkty.</p>
+           <?php }?>
+
+
+             </a>
+
+
           <?php
           } else {
           ?>

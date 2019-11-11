@@ -29,3 +29,6 @@ RewriteRule ^szlafroki/?$ index.php?klasa=KlientZalogowany&funkcja=powitanie&kat
 #           które jest dodawane do koszyka, i oznaczające jego:'id'
 RewriteRule ^dodaj-do-koszyka/(\d+)$ index.php?klasa=Koszyk&funkcja=dodaj&id=$1 [L]
 RewriteRule ^koszyk$ index.php?klasa=Koszyk&funkcja=koszyk [L]
+RewriteRule ^usun-z-koszyka/(\d+)$ index.php?klasa=Koszyk&funkcja=usun&id=$1 [L]
+RewriteRule ^usun-wszystko-z-koszyka/?$ index.php?klasa=Koszyk&funkcja=usunWszystko [L]
+#RewriteRule ^pokaz_koszyk/?$ index.php?klasa=Koszyk&funkcja=pokaz_koszyk[L]

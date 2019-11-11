@@ -14,6 +14,7 @@ class Database
    * @return self Zwraca cały obiekt do wykonywania dalszych funkcji
    */
   public function connect() : self // self -zwraca klasę albo obiekt tej klasy
+   // w tym wypadku obiekt tej klasy : $this  CZYLI  $this->pdo = new PDO()
   {
     if (! $this->isConnected()) {
       $this->pdo = new PDO(
@@ -61,7 +62,7 @@ class Database
       return $this->pdo->lastInsertId();
       // lastInsertId - POKAZUJE id OSTATNIEGO WSTAWIONEGO WIERSZA
     } else {
-      return $result; // JEŻELI INNA KOMENDA TO INFORMACJA
+      return $result; // UPDATE LUB DELETE -  JEŻELI INNA KOMENDA TO INFORMACJA
                      // CZY POSZŁO CZY NIE POSZŁO.
     }
   }

@@ -20,7 +20,8 @@ class Dostep
         $dbc_h = new PDO(Ustawienia::get('dsn'), 'root', '') or die ("Nie udało sie połączyć z bazą");
         $query = "SELECT * FROM klienci WHERE login = '$login' AND haslo = '$haslo'";
         $stmt = ($dbc_h->query($query));
-        // Tu wykonac sprawdzenie czy fetchAll zwraca dane z bazy jednego uzytkownika - jeśli tak, należy wykorzystac klasę Sesja i ustawic w sesji zmienne związane z użytkownikem
+        // Tu wykonac sprawdzenie czy fetchAll zwraca dane z bazy jednego uzytkownika -
+        // jeśli tak, należy wykorzystac klasę Sesja i ustawic w sesji zmienne związane z użytkownikem
         // fetchall - przechwyć wszysto
         $dane = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if (count($dane) === 1)

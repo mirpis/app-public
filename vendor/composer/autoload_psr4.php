@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Klasy\\' => array($baseDir . '/Klasy'),
     'Kint\\' => array($vendorDir . '/kint-php/kint/src'),
+    'Config\\' => array($baseDir . '/config'),
 );

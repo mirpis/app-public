@@ -6,11 +6,7 @@
 
     <div id="pjax-container" class="clearfix">
 
-
-
-
     </div>
-
 
    <a class="btn btn-outline-warning w-10 mt-3" href="<?php echo APP_URL ?>">Powrót do zakupów</a>
    <h1>Zakupy on-line</h1>
@@ -44,23 +40,19 @@
 
     </div>
 
-    <?php if($koszyk > 0){ ?>
+    <?php if(isset($koszyk) && count($koszyk) > 0){ ?>
     <p>Twój koszyk zawiera : <?php echo count($_SESSION['koszyk']);?> produkty.</p>
     <?php }?>
 
 
-      <?php if($koszyk == 0){ ?>
+      <?php if(!isset($koszyk) || count($koszyk) == 0){ ?>
       <p>Twój koszyk jest pusty.</p>
       <?php }?>
 
     <a class="col-md-12 btn btn-warning btn-lg btn-block"
-       href="<?php echo APP_URL . 'pusty_koszyk/' . $k ?>">Usuń wszystko z koszyka</a>
+       href="<?php echo APP_URL . 'usun-wszystko-z-koszyka' ?>">Usuń wszystko z koszyka</a>
 
     <button class="btn btn-outline-light w-100" type="submit" name="button">
       <a href = 'zamowienie.php'>Złóż zamówienie</a></button>
-
-
-
-
 
 </div>

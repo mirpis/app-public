@@ -1,6 +1,8 @@
 <?php
 namespace Klasy;
 
+use Config\Ustawienia;
+
 define('APP_URL', Ustawienia::get('appURL')); // define() - definiuje STAŁĄ
 /**
  *
@@ -17,10 +19,12 @@ class Glowna
       $akcja = $_GET['funkcja']; // w htacces np: funkcja=logowanie
 
       $obiekt = new $kontroler(); // wielofunkcyjny
-      // $obiekt = new $kontroler(); // new \Klasy\Dostep();,new \Klasy\Start();
+
+      // $obiekt = new $kontroler(); // new \Klasy\Dostep();,new \Klasy\Start();$e);
 
       $obiekt->$akcja();// $akcja() to to co w : $_GET['funkcja'];
       // w htacces : klasa=KlientZalogowany&funkcja=powitanie
+
 
       // CZYLI:
       //             na $obiekt-cie = new $kontroler() - (dowolnej klasy)

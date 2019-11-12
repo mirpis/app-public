@@ -16,6 +16,10 @@ class ComposerStaticInit921aed6e0c95dab7b6e9aa0acfadf801
             'Klasy\\' => 6,
             'Kint\\' => 5,
         ),
+        'C' => 
+        array (
+            'Config\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -26,6 +30,10 @@ class ComposerStaticInit921aed6e0c95dab7b6e9aa0acfadf801
         'Kint\\' => 
         array (
             0 => __DIR__ . '/..' . '/kint-php/kint/src',
+        ),
+        'Config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/config',
         ),
     );
 

@@ -1,9 +1,9 @@
 <?php
 namespace Klasy;
 use PDO;
-use Klasy\Ustawienia;
+use Config\Ustawienia;
 use Klasy\Sesja;
-use Klasy\Database;
+use Config\Database;
 /**
 *
 */

@@ -1,6 +1,7 @@
 <?php
 namespace Klasy;
 
+use Config\Database;
 /**
  *
  */

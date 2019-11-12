@@ -75,11 +75,11 @@
 
 
 
-           <?php if(!isset($_SESSION['koszyk'])) { ?>
+           <?php if(!isset($_SESSION['koszyk']) || count($_SESSION['koszyk']) == 0) { ?>
            <p>Twój koszyk jest pusty.</p>
           <?php }?>
 
-           <?php if(isset($_SESSION['koszyk'])) { ?>
+           <?php if(isset($_SESSION['koszyk']) && count($_SESSION['koszyk']) > 0) { ?>
              <p> : <?php echo count($_SESSION['koszyk']);?> produkty.</p>
            <?php }?>
 

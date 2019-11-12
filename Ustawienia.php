@@ -1,5 +1,5 @@
 <?php
-namespace Klasy;
+namespace Config;
 /**
  * Ustawienia aplikacji
  */
@@ -18,8 +18,8 @@ class Ustawienia
     'appDir' => '',
     'dbType' => 'mysql',
     'dbName' => 'korepetycje2019',
-    'dsn' => 'mysql:dbname=korepetycje2019;hostname=localhost;charset=utf8',
-    'appURL' => 'http://localhost/app/'
+    'dsn' => 'mysql:dbname=id11562510_app;hostname=localhost;charset=utf8',
+    'appURL' => 'https://ubraniadospania.000webhostapp.com/app/'
     // ..
   ];
   /**

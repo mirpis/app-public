@@ -1,9 +1,9 @@
 <?php
 namespace Klasy;
 use PDO;
-use Klasy\Ustawienia;
+use Config\Ustawienia;
 use Klasy\Sesja;
-use Klasy\Database;
+use Config\Database;
 /**
 *
 */
@@ -70,9 +70,24 @@ class Koszyk
      // if(isset($koszyk) && in_array($id, $koszyk))
      //if(in_array($id, $koszyk))
      //if($_GET['action']=="usun")
-     if(isset($_SESSION['koszyk'][$_GET['id']]))
+
+     // $czyJestWKoszyku = false;
+     //
+     // foreach ($_SESSION['koszyk'] as $klucz => $wartosc) {
+     //   if ($wartosc == $_GET['id']) {
+     //     $czyJestWKoszyku = true;
+     //     break;
+     //   }
+     // }
+
+     if(in_array($_GET['id'], $_SESSION['koszyk']))
      {
-     unset($_SESSION['koszyk'][$_GET['id']]);
+       foreach ($_SESSION['koszyk'] as $klucz => $wartosc) {
+         if ($wartosc == $_GET['id']) {
+           unset($_SESSION['koszyk'][$klucz]);
+         }
+       }
+     // unset($_SESSION['koszyk'][$_GET['id']]);
       //exit;
      }
 
@@ -81,18 +96,8 @@ class Koszyk
 
    public function usunWszystko()
    {
-     $id = $_GET ['id'];
-
-
-     // if(isset($_SESSION['koszyk']))
-      if(isset($_GET['usunWszystko']))
-     {
-       unset($_SESSION['koszyk']);
-
-       exit();
-      }
+     unset($_SESSION['koszyk']);// = [];
      header('Location: ' . Ustawienia::get('appURL') . 'koszyk');
-
    }
 
  //  public function pusty_koszyk()

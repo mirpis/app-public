@@ -3,7 +3,8 @@ namespace Klasy;
 //session_start();
 
 use PDO;
-use Klasy\Ustawienia;
+use Config\Ustawienia;
+use Config\Database;
 
 class RejestracjaKlienta
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Klasy;
+namespace Config;
 
 use PDO;
 
@@ -19,8 +19,8 @@ class Database
     if (! $this->isConnected()) {
       $this->pdo = new PDO(
         Ustawienia::get('dsn'),
-        'root',
-        ''
+        'root',// Na Serwerze jest tak: 'id11562510_app',
+        ''// Na Serwerze jest tak: 'Qwerty7#'
       );
     }
 
